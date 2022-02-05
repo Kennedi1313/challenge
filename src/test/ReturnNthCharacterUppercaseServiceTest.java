@@ -5,6 +5,10 @@ import org.junit.Before;
 import org.junit.Test;
 import service.ReturnNthCharacterUppercaseService;
 
+import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.stream.Collectors;
+
 public class ReturnNthCharacterUppercaseServiceTest {
     ReturnNthCharacterUppercaseService service;
     @Before
@@ -16,4 +20,10 @@ public class ReturnNthCharacterUppercaseServiceTest {
     public void methodReturnsAString() {
         assertNotNull(service.returnNthCharacterUppercase("STRING"));
     }
+
+    @Test
+    public void methodReturnsANotEmptyString() {
+        assertFalse(service.returnNthCharacterUppercase("STRING").isEmpty());
+    }
+
 }
