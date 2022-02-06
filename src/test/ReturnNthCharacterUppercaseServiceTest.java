@@ -5,11 +5,6 @@ import org.junit.Before;
 import org.junit.Test;
 import service.ReturnNthCharacterUppercaseService;
 
-import java.util.List;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-
 public class ReturnNthCharacterUppercaseServiceTest {
     ReturnNthCharacterUppercaseService service;
     @Before
@@ -44,5 +39,15 @@ public class ReturnNthCharacterUppercaseServiceTest {
 
         givenN = 3;
         assertEquals(service.returnNthCharacterUppercase(givenText, givenN), "CNA");
+    }
+
+    @Test
+    public void zeroOrNegativeNShouldReturnAnEmptyString() {
+        int givenN = -2;
+        String givenText = "ITCLiNicAl";
+        assertEquals(service.returnNthCharacterUppercase(givenText, givenN), "");
+
+        givenN = 0;
+        assertEquals(service.returnNthCharacterUppercase(givenText, givenN), "");
     }
 }
