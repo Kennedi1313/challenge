@@ -1,6 +1,5 @@
 package service;
 
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class ReturnNthCharacterUppercaseService {
@@ -10,7 +9,6 @@ public class ReturnNthCharacterUppercaseService {
                 .filter(i -> (i+1) % givenN == 0)
                 .filter(i -> Character.isUpperCase(givenText.charAt(i)))
                 .mapToObj(i -> Character.toString(givenText.charAt(i)))
-                .collect(Collectors.toList())
-                .stream().reduce("", String::concat);
+                .reduce("", String::concat);
     }
 }
