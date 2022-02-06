@@ -49,4 +49,11 @@ public class ReturnNthCharacterUppercaseServiceTest {
         givenN = 0;
         assertEquals(service.returnNthCharacterUppercase(givenText, givenN), "");
     }
+
+    @Test
+    public void methodShouldReturnTheNthLetterNumberOrSpecialCharacter() {
+        int givenN = 1;
+        String givenText = "!tCL1Nical";
+        assertEquals(service.returnNthCharacterUppercase(givenText, givenN), "!CL1N");
+    }
 }
