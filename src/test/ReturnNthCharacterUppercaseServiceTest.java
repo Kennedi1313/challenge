@@ -63,4 +63,9 @@ public class ReturnNthCharacterUppercaseServiceTest {
         String givenText = "ItCLINiCAL";
         assertEquals(service.returnNthCharacterUppercase(givenText, givenN), "ICLINCAL");
     }
+
+    @Test()
+    public void nullGivenTextShouldReturnAnEmptyString() {
+        assertEquals(service.returnNthCharacterUppercase(null, 1), "");
+    }
 }
