@@ -56,4 +56,11 @@ public class ReturnNthCharacterUppercaseServiceTest {
         String givenText = "!tCL1Nical";
         assertEquals(service.returnNthCharacterUppercase(givenText, givenN), "!CL1N");
     }
+
+    @Test
+    public void testPrintCountOfCharacters() {
+        int givenN = 1;
+        String givenText = "ItCLINiCAL";
+        assertEquals(service.returnNthCharacterUppercase(givenText, givenN), "ICLINCAL");
+    }
 }
