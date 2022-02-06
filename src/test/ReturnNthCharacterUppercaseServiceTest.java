@@ -28,10 +28,12 @@ public class ReturnNthCharacterUppercaseServiceTest {
 
     @Test
     public void methodReturnsOnlyUppercaseCharacters() {
-        String textWithUppercaseAndLowercaseCharacters = "ITClinical";
+        String textWithUppercaseAndLowercaseCharacters = "ITCLiNicAl";
         boolean thereAreAtLeastOneLowerCase = service.returnNthCharacterUppercase(textWithUppercaseAndLowercaseCharacters)
                 .chars()
                 .anyMatch(character -> !Character.isUpperCase((char) character) );
+
+        System.out.println(service.returnNthCharacterUppercase(textWithUppercaseAndLowercaseCharacters));
         assertFalse(thereAreAtLeastOneLowerCase);
     }
 
