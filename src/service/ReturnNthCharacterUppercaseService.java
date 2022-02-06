@@ -7,7 +7,7 @@ public class ReturnNthCharacterUppercaseService {
         if(givenN <= 0) return "";
         return IntStream.range(0, givenText.length())
                 .filter(i -> (i+1) % givenN == 0)
-                .filter(i -> Character.isUpperCase(givenText.charAt(i)))
+                .filter(i -> Character.isUpperCase(givenText.charAt(i)) || !Character.isAlphabetic(givenText.charAt(i)))
                 .mapToObj(i -> Character.toString(givenText.charAt(i)))
                 .reduce("", String::concat);
     }
