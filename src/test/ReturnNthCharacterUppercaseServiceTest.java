@@ -33,8 +33,6 @@ public class ReturnNthCharacterUppercaseServiceTest {
         boolean thereAreAtLeastOneLowerCase = service.returnNthCharacterUppercase(textWithUppercaseAndLowercaseCharacters, 1)
                 .chars()
                 .anyMatch(character -> !Character.isUpperCase((char) character) );
-
-        System.out.println(service.returnNthCharacterUppercase(textWithUppercaseAndLowercaseCharacters, 1));
         assertFalse(thereAreAtLeastOneLowerCase);
     }
 
@@ -46,6 +44,5 @@ public class ReturnNthCharacterUppercaseServiceTest {
 
         givenN = 3;
         assertEquals(service.returnNthCharacterUppercase(givenText, givenN), "CNA");
-
     }
 }
